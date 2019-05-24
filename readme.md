@@ -1,17 +1,22 @@
- 2- ### IMPORTANT: Consume the respective API resources:  
-1. Users: https://jsonplaceholder.typicode.com/users 
-2. 2. Posts: https://jsonplaceholder.typicode.com/posts 
-3. 3. Comments: https://jsonplaceholder.typicode.com/comments  
-4. And render on the homepage to replace the respective placeholder information provided    Focus of assessment (HINTS): 
-5. 1. Testing 
-6. 2. Performance(Caching, Eventing, etc.)
-7.  3. SOLID code 
+ 
+##Readme
 
-PLEASE EXPOSE AT LEAST THE FOLLOWING APIs:
- 1. All users 
- 2. 2. A user with his/her post(s) 
- 3. 3. A user with his/her comments and the respective post of the comment 
- 4. 4. All Post 
- 5. 5. A post with its comments 
- 6. 6. All comments 
- 7. 7. A comment with its respective post.
+- `php artisan route:list`  to view all the existing endpoints defined
+- `app/Cache` for my caching strategy to reduce latency
+- `app/Repositories` I decided to go with the repository pattern. All of the endpoints repositories are inside there.
+- `app/constants.php` To hold all the constants, in this case the endpoints url. This makes it easier to change them if we have to instead of digging into source files.
+- `test/Feature/ApiTest` test file for the tests I wrote. Ofcause I could have added more tests give enough time.
+- I used Guzzle as my network request library
+###Improvements points
+- Have api transformers to hide fields that the consumer shouldn't have access to unless if they have to. Or to hide the database structure (internal data structure).
+- Schedule a Job to run to update the cache, fire an even when new data is added.
+
+####Question: 
+Consume the respective API resources:
+1. Users: https://jsonplaceholder.typicode.com/users 
+2. Posts: https://jsonplaceholder.typicode.com/posts 
+3. Comments: https://jsonplaceholder.typicode.com/comments  
+4. And render on the homepage to replace the respective placeholder information provided Focus of assessment (HINTS): 
+5. Testing 
+6. Performance(Caching, Eventing, etc.)
+7. SOLID code 
