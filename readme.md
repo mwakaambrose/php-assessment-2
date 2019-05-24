@@ -1,5 +1,4 @@
- 
-## Readme
+ ## Readme
 
 - `php artisan route:list`  to view all the existing endpoints defined
 - `app/Cache` for my caching strategy to reduce latency
