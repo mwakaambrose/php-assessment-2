@@ -1,5 +1,5 @@
  
-##Readme
+## Readme
 
 - `php artisan route:list`  to view all the existing endpoints defined
 - `app/Cache` for my caching strategy to reduce latency
@@ -8,16 +8,16 @@
 - `test/Feature/ApiTest` test file for the tests I wrote. Ofcause I could have added more tests give enough time.
 - I used Guzzle as my network request library
 
-###Improvements points
+### Improvements points
 - Have api transformers to hide fields that the consumer shouldn't have access to unless if they have to. Or to hide the database structure (internal data structure).
 - Schedule a Job to run to update the cache, fire an even when new data is added.
 
-####Question:
+#### Question:
 Consume the respective API resources:
 1. Users: https://jsonplaceholder.typicode.com/users 
 2. Posts: https://jsonplaceholder.typicode.com/posts 
 3. Comments: https://jsonplaceholder.typicode.com/comments  
 4. And render on the homepage to replace the respective placeholder information provided Focus of assessment (HINTS): 
-5. Testing 
-6. Performance(Caching, Eventing, etc.)
-7. SOLID code 
+- Testing 
+- Performance(Caching, Eventing, etc.)
+- SOLID code 
