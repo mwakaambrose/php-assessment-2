@@ -1,6 +1,6 @@
 ## Readme 
 
-This isi build using laravel 5.8. Redis is used for caching. Outside of that, the project doesn't depend on any external library outside of the `laravel/php` requirements
+This is built using laravel 5.8. Redis is used for caching. Outside of that, the project doesn't depend on any external library outside of the `laravel/php` requirements
 
 - `php artisan route:list`  to view all the existing endpoints defined
 - `app/Cache` for my caching strategy to reduce latency
