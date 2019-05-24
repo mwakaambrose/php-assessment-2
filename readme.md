@@ -7,11 +7,12 @@
 - `app/constants.php` To hold all the constants, in this case the endpoints url. This makes it easier to change them if we have to instead of digging into source files.
 - `test/Feature/ApiTest` test file for the tests I wrote. Ofcause I could have added more tests give enough time.
 - I used Guzzle as my network request library
+
 ###Improvements points
 - Have api transformers to hide fields that the consumer shouldn't have access to unless if they have to. Or to hide the database structure (internal data structure).
 - Schedule a Job to run to update the cache, fire an even when new data is added.
 
-####Question: 
+####Question:
 Consume the respective API resources:
 1. Users: https://jsonplaceholder.typicode.com/users 
 2. Posts: https://jsonplaceholder.typicode.com/posts 
